@@ -82,13 +82,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
+*Hello mekk {} !*
+✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/95f178b6b1a64e5eea98c.jpg)
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
 ────────────────────────
-✪ Hit /help to see my available commands.
+✪ Tekan /bantu untuk melihat perintah saya yang tersedia.
+✪ powered by @Lerrdab 
 """
 
 buttons = [
@@ -103,7 +104,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+            text = "✨ Tambahkan Saya Ke Grup " , url = f"t.me/ { bu } ?startgroup=new" ),
     ],
 ]
 
@@ -230,8 +231,8 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
-            parse_mode=ParseMode.HTML
+            f"👋 Hai Mek, saya { dispatcher .bot . first_name } . Senang bertemu dengan Anda. " ,
+            parse_mode = ParseMode . HTML
        )
 
 
